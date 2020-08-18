@@ -10,7 +10,7 @@ function Card(props) {
                 <div className="d-flex justify-between mb-4" >
                     <div className="date" > {props.data.date || "22, Jan, 2020"} </div>
                     
-                    <div className="free" > Free </div>
+                    <div className={props.data.entryType.toLowerCase()} > {props.data.entryType} </div>
                 </div>
                 <div className="d-flex align-center mb-4">
                     <img src={markImg} alt="Marker" style={{width:"22px"}} />

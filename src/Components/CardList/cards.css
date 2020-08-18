@@ -64,9 +64,9 @@
     color: #706E6E;
 }
 
-.card .free{
-    background: rgb(237, 255, 236);
-    border: 0.5px solid #9CD398;
+
+.card .free,.card .paid{
+   
     box-sizing: border-box;
     border-radius: 10px;
 
@@ -77,9 +77,19 @@
     line-height: 15px;
     text-align: center;
 
-    color: #284D24;
+    
 
     padding: 3px 12px;
+}
+.card .free{
+    background: rgb(237, 255, 236);
+    border: 0.5px solid #9CD398;
+    color: #284D24;
+}
+.card .paid{
+    background: rgb(255, 249, 236);
+    border: 0.5px solid rgb(211, 183, 152);
+    color: rgb(77, 56, 36);
 }
 
 .card .footer{
