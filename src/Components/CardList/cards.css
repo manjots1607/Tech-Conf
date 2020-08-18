@@ -65,7 +65,7 @@
 }
 
 .card .free{
-    background: #D4F7D2;
+    background: rgb(237, 255, 236);
     border: 0.5px solid #9CD398;
     box-sizing: border-box;
     border-radius: 10px;
@@ -153,12 +153,12 @@
     max-width:600px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 4px 30px 1px rgb(114, 35, 86,0.4);
+    box-shadow: 0px 4px 30px 1px rgba(35, 72, 114, 0.4);
     
 }
 
 .srch.focus{
-    box-shadow: 0px 4px 10px 1px rgb(114, 35, 86,0.4);
+    box-shadow: 0px 4px 10px 1px rgba(35, 69, 114, 0.4);
     border:3px solid #346D97;
 }
 
