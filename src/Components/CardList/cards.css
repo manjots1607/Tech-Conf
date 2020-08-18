@@ -147,7 +147,7 @@
     margin-left:24px;
     margin-right:24px;
 
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     transition: 0.3s;
     width:90%;
     max-width:600px;
@@ -160,4 +160,23 @@
 .srch.focus{
     box-shadow: 0px 4px 10px 1px rgb(114, 35, 86,0.4);
     border:3px solid #346D97;
+}
+
+.optionsDiv{
+    width: 97%;
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.optionsDiv select{
+    border: 2px solid #346D97;
+    padding: 5px;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.optionsDiv select:focus{
+      outline: none;  
 }

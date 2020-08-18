@@ -12,6 +12,7 @@ function CardList(props) {
     const [cards,setCards] = useState([]);
     const [focusInp, setFocusInp] = useState(false);
     const [srchTxt, setSrchTxt] = useState("");
+    const [sort, setSort] = useState("");
 
     useEffect(()=>{
         fetch("https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences")
@@ -64,6 +65,28 @@ function CardList(props) {
         setSrchTxt(e.target.value);
     }
 
+    function sortHandler(e){
+        if(e.target.value === "date" ){
+            const Conf=[...cards];
+            Conf.sort((a,b)=>{
+             if(new Date(a.date)> new Date(b.date)){
+                 return 1;
+             }else if(new Date(a.date)< new Date(b.date)){
+                 return -1;
+             }else{
+                 return 0;
+             }
+            });
+            setCards(Conf);
+        }else{
+            const AllConf=[...freeEvents,...paidEvents];
+            setCards(AllConf);
+        }
+
+        setSort(e.target.value);
+
+    }
+
     return (
         <div className="cardCont" >
             <div style={{
@@ -72,6 +95,12 @@ function CardList(props) {
                 <div className={focusInp?"srch focus":"srch"}>
                     <input type="text" onFocus={()=>{setFocusInp(true)}} onBlur={()=>{setFocusInp(false)}} value={srchTxt} onChange={srchChangeHandler}   placeholder="Type to Search Conferences" ></input>
                     <span className="float-right pr-3 srchIcon"><i className="fa fa-search"></i></span>
+                </div>
+                <div className="optionsDiv d-flex justify-right" >
+                    <select value={sort} onChange={sortHandler} >
+                        <option value=""> Sort By </option>
+                        <option value="date"> Date </option>
+                    </select>
                 </div>
 
             </div>

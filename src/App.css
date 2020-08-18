@@ -11,6 +11,10 @@
 
 }
 
+.justify-right{
+  justify-content: flex-end;
+}
+
 .mb-4{
   margin-bottom: 2em;
 }
