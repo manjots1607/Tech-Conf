@@ -5,7 +5,7 @@
     transform: translateX(-50%);
     z-index: 90;
     background-color: white;
-    width:85%;
+    width:95%;
     max-width:800px;
     min-height: 400px;
     
@@ -31,7 +31,7 @@
 }
 .backdropAlert{
     position: fixed;
-    background-color: rgba(31, 39, 28, 0.945);
+    background-color: rgba(28, 36, 39, 0.945);
     top:0;left:0;bottom: 0;right:0;
     z-index: 84;
 
@@ -40,19 +40,4 @@
     margin:30px;
     font-size: 17px;
 
-}
-
-@media (max-width:500px){
-    .custAlert{
-        max-width:280px;
-        left:98%;
-        transform: translateX(-100%);
-    }
-}
-@media (min-width:501px) and (max-width:700px){
-    .custAlert{
-        max-width:380px;
-        left:90%;
-        transform: translateX(-100%);
-    }
 }
