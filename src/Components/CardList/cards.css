@@ -104,7 +104,7 @@
     width: 100%;
 }
 
-.card .btn{
+ .btn{
     background: #346D97;
     border-radius: 10.5px;
     padding:5px 18px;
@@ -120,10 +120,13 @@
     text-decoration: none;
 
     color: #FFFFFF;
+    border:none;
+    outline:none;
+    cursor: pointer;
 
 }
 
-.card .btn:hover{
+.btn:hover{
     background-color: transparent;
     border:1px solid #346D97;
     color: #346D97;
@@ -189,4 +192,21 @@
 
 .optionsDiv select:focus{
       outline: none;  
+}
+
+.filterSelect{
+    border: 2px solid #346D97;
+    padding: 5px 10px;
+    min-width: 100px;
+    max-width: 150px;
+    text-align: center;
+    background-color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left:20px;
+}
+
+.filterSelect:disabled{
+    border: 2px solid rgb(98, 110, 119);
+    background-color: rgb(235, 231, 231);
 }
